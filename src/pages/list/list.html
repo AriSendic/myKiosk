@@ -1,0 +1,29 @@
+
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>list</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-slides pager slidesPerView="3">
+    <ion-slide *ngFor="let product of products" >
+      <ion-grid>
+        <ion-row text-center>
+          <ion-col>
+            <img (click)="itemTapped($event, product)" src={{product.image}}>
+          </ion-col>
+        </ion-row>
+        <ion-row text-center> 
+          <ion-col> 
+            <button ion-button (click)="itemTapped($event, product)">{{ product.name }}</button>
+          </ion-col>
+        </ion-row>
+      </ion-grid>      
+    </ion-slide>
+ </ion-slides> 
+
+</ion-content>
