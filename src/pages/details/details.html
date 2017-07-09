@@ -11,11 +11,15 @@
 <ion-content padding>
   <ion-grid>
     <ion-row>
-      <ion-col offset-1>
+      <ion-col col-10 offset-1>
         <img class="detail_img" src={{selectedItem.image}}>
         <h2>The {{selectedItem.name}}</h2>
         <h3>Serial #: {{selectedItem.serial}}</h3>
         <h3>Color: {{selectedItem.color}}</h3>
+        <button ion-button >Add to Cart!</button>
+      </ion-col>
+      <ion-col>
+        <ion-icon name="cart" item-right></ion-icon>
       </ion-col>
     </ion-row>
   </ion-grid>      

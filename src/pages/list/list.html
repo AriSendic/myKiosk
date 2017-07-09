@@ -9,21 +9,22 @@
 
 
 <ion-content padding>
-  <ion-slides pager slidesPerView="3">
-    <ion-slide *ngFor="let product of products" >
-      <ion-grid>
-        <ion-row text-center>
-          <ion-col>
-            <img (click)="itemTapped($event, product)" src={{product.image}}>
-          </ion-col>
-        </ion-row>
-        <ion-row text-center> 
-          <ion-col> 
-            <button ion-button (click)="itemTapped($event, product)">{{ product.name }}</button>
-          </ion-col>
-        </ion-row>
-      </ion-grid>      
-    </ion-slide>
- </ion-slides> 
-
+  <ion-slides>
+    <ng-container *ngFor="let product of products; let i=index; let even=even; let last=last">
+      <ion-slide *ngIf="even">
+        <ion-grid>
+          <ion-row text-center>
+            <ion-col col-6>
+              <img (click)="itemTapped($event, product)" src={{product.image}}>
+              <button ion-button (click)="itemTapped($event, product)">{{ product.name }}</button>
+            </ion-col>
+            <ion-col col-6 *ngIf=!last>
+              <img (click)="itemTapped($event, products[i+1])" src={{products[i+1].image}}>
+              <button ion-button (click)="itemTapped($event, products[i+1])">{{ products[i+1].name }}</button>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-slide>
+    </ng-container>
+  </ion-slides> 
 </ion-content>
