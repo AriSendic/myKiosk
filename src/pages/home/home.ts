@@ -4,6 +4,7 @@ import { NavController, NavParams } from 'ionic-angular';
 import { Product} from '../../app/product';
 import { ListPage } from '../list/list';
 
+
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'

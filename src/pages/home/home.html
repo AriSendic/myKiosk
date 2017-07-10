@@ -7,21 +7,21 @@
 </ion-header>
 
 <ion-content padding>
-  
+  <video autoplay loop src="assets/video/Went-Fetch.mp4"></video>
   <ion-grid>
     <ion-row text-center>
       <ion-col>
-        <button ion-button large (click)="itemTapped($event, 'chair')">Chairs</button>
+        <button (click)="itemTapped($event, 'chair')">Chairs</button>
       </ion-col>
     </ion-row>
     <ion-row text-center>
       <ion-col>
-        <button ion-button large (click)="itemTapped($event, 'couch')">Couches</button>
+        <button (click)="itemTapped($event, 'couch')">Couches</button>
       </ion-col>
     </ion-row>
     <ion-row text-center>
       <ion-col>
-        <button ion-button large (click)="itemTapped($event, 'crib')">Cribs</button>
+        <button (click)="itemTapped($event, 'crib')">Cribs</button>
       </ion-col>
     </ion-row>
   </ion-grid>
