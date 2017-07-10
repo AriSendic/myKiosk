@@ -16,10 +16,11 @@
         <h2>The {{selectedItem.name}}</h2>
         <h3>Serial #: {{selectedItem.serial}}</h3>
         <h3>Color: {{selectedItem.color}}</h3>
-        <button ion-button >Add to Cart!</button>
+        <button ion-button (click)="addToCart()">Add to Cart!</button>
       </ion-col>
       <ion-col>
-        <ion-icon name="cart" item-right></ion-icon>
+        <ion-icon name="cart" item-right><counter></counter></ion-icon>
+        
       </ion-col>
     </ion-row>
   </ion-grid>      
