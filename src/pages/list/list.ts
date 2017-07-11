@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { ViewChild } from '@angular/core';
 import { Slides } from 'ionic-angular';
+import * as _ from "lodash";
 import { Product} from '../../app/product';
 import { productService } from '../../app/product.service';
 import { DetailsPage } from '../details/details';
@@ -23,6 +24,7 @@ export class ListPage implements OnInit {
       .getProducts(this.selectedCategory)
       .then(products => this.products = products);
   }
+
   ngOnInit(): void {
     this.getProducts();
   }

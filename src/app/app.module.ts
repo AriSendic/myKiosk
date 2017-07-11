@@ -12,14 +12,15 @@ import { ListPage } from '../pages/list/list';
 import { DetailsPage } from '../pages/details/details';
 import { CounterComponent } from '../components/counter/counter';
 
+
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
     ListPage,
     DetailsPage,
-    CounterComponent
-  ],
+    CounterComponent,
+    ],
   imports: [
     BrowserModule,
     HttpModule,
