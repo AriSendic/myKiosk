@@ -6,7 +6,7 @@ import * as _ from "lodash";
 import { Product} from '../../app/product';
 import { productService } from '../../app/product.service';
 import { DetailsPage } from '../details/details';
-
+import { GridProductComponent} from '../../app/grid-product';
 @IonicPage()
 @Component({
   selector: 'page-list',

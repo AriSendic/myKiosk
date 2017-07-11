@@ -11,7 +11,7 @@ import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
 import { DetailsPage } from '../pages/details/details';
 import { CounterComponent } from '../components/counter/counter';
-
+import { GridProductComponent} from './grid-product';
 
 @NgModule({
   declarations: [
@@ -20,6 +20,7 @@ import { CounterComponent } from '../components/counter/counter';
     ListPage,
     DetailsPage,
     CounterComponent,
+    GridProductComponent,
     ],
   imports: [
     BrowserModule,
